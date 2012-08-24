@@ -9,7 +9,6 @@ tb_remove = function() {
 	original_tb_remove(); // calls the tb_remove() of the Thickbox plugin
 	pmc_post_savior.enable_buttons();
 	setTimeout( "pmc_post_savior.login_check()", 15000 );
-	console.log("tb_remove() called pmc_post_savior.enable_buttons()");
 };
 
 /**
@@ -43,13 +42,6 @@ pmc_post_savior = {
 				pmc_post_savior.notification( '<p>' + pmc_post_savior_text.not_logged_in + '</p><p><a href="' + pmc_post_savior_opts.login_url + '" class="thickbox">' + pmc_post_savior_text.log_in + '</a></p>' );
 
 				pmc_post_savior.disable_buttons();
-
-// 				jQuery(document).on("click", "#TB_closeWindowButton", function() {
-// 					console.log("Close clicked, re-enabling buttons");
-// 					// @todo Close thickbox, Re-enable buttons, Unbind this event
-// 					pmc_post_savior.enable_buttons();
-//
-// 				});
 			}
 		} );
 	},
@@ -122,7 +114,6 @@ pmc_post_savior = {
 	 * @return void
 	 */
 	interim_login: function() {
-		//
 		jQuery("#login :button").click(function(e) {
 			parent.window.tb_remove();
 			e.preventDefault();
