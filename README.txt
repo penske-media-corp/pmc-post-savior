@@ -35,5 +35,9 @@ Because 1 minute is too long.
 
 == Changelog ==
 
+= 1.0 =
+* Fix issue where login prompt didn't show in full-screen edit mode.
+* No longer instantiate into a global.  Unnecessary since the class is already a singleton.  Props JJJ.
+
 = 0.9 =
 * Initial beta release.

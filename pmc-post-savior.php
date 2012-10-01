@@ -1,9 +1,11 @@
 <?php
 /*
 Plugin Name: PMC Post Savior
-Plugin URI:
+Plugin URI: https://github.com/Penske-Media-Corp/pmc-post-savior
 Description: PMC Post Savior checks every 15 seconds to see if you're still logged in.  If you are not, it presents a pop-up window so that you can log back in without losing your work.
-Version: 0.9
+Version: 1.0
+Author: PMC
+Author URI: http://www.pmc.com/
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -160,6 +162,6 @@ class PMC_Post_Savior {
 
 }
 
-$GLOBALS['pmc_post_savior'] = PMC_Post_Savior::get_instance();
+PMC_Post_Savior::get_instance();
 
 // EOF
