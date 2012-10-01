@@ -92,7 +92,18 @@ pmc_post_savior = {
 	 * @return void
 	 */
 	notification: function( message ) {
+		// Calculate the highest z-index on the page, so that this can overlay
+		// on top of it
+		var highest_z_index = jQuery( "#pmc-post-savior-notice" ).css( "z-index" );
+		jQuery( "body" ).find( "*" ).each( function() {
+			var this_z_index = jQuery( this ).css( "z-index" );
+			if ( "auto" !== this_z_index && this_z_index > highest_z_index ) {
+				highest_z_index = this_z_index;
+			}
+		} );
+
 		jQuery("#pmc-post-savior-notice")
+			.css( "z-index", highest_z_index )
 			.stop( true )
 			.prepend( message + '<br />' )
 			.fadeIn()
@@ -131,4 +142,4 @@ jQuery(document).ready( function() {
 		// Poll for login
 		pmc_post_savior.login_check();
 	}
-}) ;
+});
