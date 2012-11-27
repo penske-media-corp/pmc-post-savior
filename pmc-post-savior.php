@@ -90,6 +90,7 @@ class PMC_Post_Savior {
 			'nonce' => wp_create_nonce( 'pmc-post-savior-ajax-check' ),
 			'login_url' => $login_url,
 			'interim_login' => 'false',
+			'frequency' => ( 1000 * (int) apply_filters( 'pmc_post_savior_check_frequency', 15 ) ),
 		) );
 
 		wp_localize_script( 'pmc-post-savior', 'pmc_post_savior_text', array(

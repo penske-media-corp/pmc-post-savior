@@ -26,7 +26,11 @@ Since the auth cookies are not visible to javascript, this uses AJAX to communic
 
 = Why 15 seconds? =
 
-Because 1 minute is too long.
+Because 1 minute is too long.  This is filterable:
+add_filter( 'pmc_post_savior_check_frequency', function( $ttl_in_seconds = 15 ) {
+	$ttl_in_seconds = 30; // change the logout check to every 30 seconds
+	return $ttl_in_seconds;
+} );
 
 == Screenshots ==
 
@@ -36,6 +40,8 @@ Because 1 minute is too long.
 == Changelog ==
 
 = 1.1 =
+* Logout check frequency is now filterable.
+
 = 1.0 =
 * Fix issue where login prompt didn't show in full-screen edit mode.
 * No longer instantiate into a global.  Unnecessary since the class is already a singleton.  Props JJJ.
