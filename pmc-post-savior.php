@@ -3,7 +3,7 @@
 Plugin Name: PMC Post Savior
 Plugin URI: https://github.com/Penske-Media-Corp/pmc-post-savior
 Description: PMC Post Savior checks every 15 seconds to see if you're still logged in.  If you are not, it presents a pop-up window so that you can log back in without losing your work.
-Version: 1.0
+Version: 1.1
 Author: PMC
 Author URI: http://www.pmc.com/
 License: GPLv2
@@ -24,7 +24,7 @@ class PMC_Post_Savior {
 	/**
 	 * String to use for the plugin version.  Primarily used for wp_enqueue_*()
 	 */
-	const plugin_version = '1.0';
+	const plugin_version = '1.1';
 
 	/**
 	 * Holds the singleton instance of this object
