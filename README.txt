@@ -41,6 +41,7 @@ add_filter( 'pmc_post_savior_check_frequency', function( $ttl_in_seconds = 15 ) 
 
 = 1.1 =
 * Logout check frequency is now filterable.
+* Changed "Log in again" link into a button to make it more readable.
 
 = 1.0 =
 * Fix issue where login prompt didn't show in full-screen edit mode.

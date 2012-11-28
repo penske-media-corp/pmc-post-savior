@@ -39,7 +39,7 @@ pmc_post_savior = {
 				setTimeout( "pmc_post_savior.login_check()", pmc_post_savior_opts.frequency );
 			} else {
 				// Authentication failure, this message should persist on the screen so the logged out user can click the login link.
-				pmc_post_savior.notification( '<p>' + pmc_post_savior_text.not_logged_in + '</p><p><a href="' + pmc_post_savior_opts.login_url + '" class="thickbox">' + pmc_post_savior_text.log_in + '</a></p>' );
+				pmc_post_savior.notification( '<p>' + pmc_post_savior_text.not_logged_in + '</p><p><a href="' + pmc_post_savior_opts.login_url + '" class="button thickbox">' + pmc_post_savior_text.log_in + '</a>' + pmc_post_savior_text.after_login_button + '</p>' );
 
 				pmc_post_savior.disable_buttons();
 			}

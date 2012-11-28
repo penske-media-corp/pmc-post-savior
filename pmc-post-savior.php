@@ -95,8 +95,9 @@ class PMC_Post_Savior {
 
 		wp_localize_script( 'pmc-post-savior', 'pmc_post_savior_text', array(
 			'not_logged_in'    => __( 'Oops! Looks like you are not logged in.', 'pmc-post-savior' ),
-			'log_in'         => __( 'Please log in again. <br />You will not leave this screen.', 'pmc-post-savior' ),
+			'log_in'         => __( 'Log in', 'pmc-post-savior' ),
 			'maybe_offline'  => __( 'Looks like you are not connected to the server.', 'pmc-post-savior' ),
+			'after_login_button' => __( '<br />You will not leave this screen.', 'pmc-post-savior' ),
 		) );
 	}
 
